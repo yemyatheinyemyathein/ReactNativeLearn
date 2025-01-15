@@ -7,7 +7,7 @@ const StatusBarLesson = () => {
       <StatusBar
         backgroundColor={"lightgreen"}
         barStyle={"light-content"}
-        
+        hidden
       />
     </View> // barContent have option / default / light-content/ dark-content
   );

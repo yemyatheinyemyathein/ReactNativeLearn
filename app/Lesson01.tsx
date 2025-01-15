@@ -39,7 +39,7 @@ const Lesson01 = () => {
         {/* <Image source={Logo} /> */}
         <ImageBackground source={Logo} style={{ width: 300, height: 300, flex: 1 }}>
           <Text>
-            <Text style={{ color: "#fff" }}>Hello</Text> World
+            <Text style={{ color: "red" }}>Hello</Text> World
           </Text>
         </ImageBackground>
         <Pressable onPress={() => console.log("Pressed From Text")}>

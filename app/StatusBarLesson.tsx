@@ -6,10 +6,10 @@ const StatusBarLesson = () => {
     <View style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
       <StatusBar
         backgroundColor={"lightgreen"}
-        barStyle={"light-content"}
+        barStyle={"dark-content"}
         hidden
       />
-    </View> // barContent have option / default / light-content/ dark-content
+    </View> // barStyle have option / default / light-content/ dark-content
   );
 };
 

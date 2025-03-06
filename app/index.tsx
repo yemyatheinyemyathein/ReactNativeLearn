@@ -14,11 +14,14 @@ import StatusBarLesson from "./StatusBarLesson";
 import ActivityIndicatorLesson from "./ActivityIndicatorLesson";
 import AlertLesson from "./AlertLesson";
 import Greet from "@/components/Greet";
+import StyleSheetStyling from "./StyleSheetStyling";
 
 const App = () => {
   const [modelOpen, setModelOpen] = useState(false);
   return (
     <View style={{ flex: 1 }}>
+      <ScrollView>
+
       <StatusBarLesson/>
       <Lesson01 />
       <ActivityIndicatorLesson/>
@@ -26,6 +29,8 @@ const App = () => {
       
       <Greet name="Ye Myat Hein"/>
       <Greet name="Hein Ye Myat"/>
+      <StyleSheetStyling/>
+      </ScrollView>
     </View>
   );
 };

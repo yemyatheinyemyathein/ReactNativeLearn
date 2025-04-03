@@ -38,10 +38,9 @@ const App = () => {
           <Box style={{ backgroundColor: "#b65d1f", flex : 1, alignSelf: "flex-end" }}>Box 2</Box>
           <Box style={{ backgroundColor: "#1c4c56", flex : 3, alignSelf: "center" }}>Box 3</Box>
           <Box style={{ backgroundColor: "#ab9156", flex : 1, alignSelf: 'auto' }}>Box 4</Box>
-          {/* <Box style={{ backgroundColor: "#6b0803" }}>Box 5</Box>
-          <Box style={{ backgroundColor: "#1c4c56" }}>Box 6</Box>
-          <Box style={{ backgroundColor: "#b95f21" }}>Box 7</Box> */}
-          {/* adsadsfadsfasdfadsfadsfadsfawawgasefawwfasdgadsv */}
+          <Box style={{ backgroundColor: "#6b0803", flexBasis: 140, flex: 1 }}>Box 5</Box> {/* height and flexbasic are not same flexbasic distribute proportionally when flex 1 */}
+          <Box style={{ backgroundColor: "#1c4c56", height: 140, flex: 1 }}>Box 6</Box> {/* height and flexbasic are not same flexbasic distribute proportionally when flex 1 */}
+          <Box style={{ backgroundColor: "#b95f21", flexShrink: 1 }}>Box 7</Box> {/* It fit in the children into parent when there's no enough width or height*/}
         </View>
     //   </ScrollView>
     // </View>
@@ -53,11 +52,15 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     height: 300,
-    flexWrap: "wrap-reverse", // wrap, wrap-reverse
+    flexWrap: "wrap", // wrap, wrap-reverse
     flex: 1,
     // flexDirection: "row-reverse", // column , column-reverse, row, row-reverse
     // justifyContent: "flex-end", // flex-start, flex-end, center, space-between, space-evenly
     alignItems: "flex-end", // stretch, flex-start, flex-end, center, baseLine,
+    alignContent: "flex-end", // stretch, flex-start, flex-end, center, baseLine,
+    rowGap: 20,
+    columnGap : 30,
+    gap: 10, // row + column
     marginTop: 120,
     borderWidth: 6,
     borderColor: "red",

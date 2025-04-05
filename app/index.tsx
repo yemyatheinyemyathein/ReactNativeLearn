@@ -21,18 +21,19 @@ import Box from "./Box";
 const App = () => {
   const [modelOpen, setModelOpen] = useState(false);
   return (
-    // <View style={{ flex: 1 }}>
-    //   <ScrollView>
+    <View style={{ flex: 1 }}>
+      <ScrollView>
 
-      //   {/* <StatusBarLesson/>
-      // <Lesson01 />
-      // <ActivityIndicatorLesson/>
-      // <AlertLesson/>
+        <StatusBarLesson/>
+      <Lesson01 />
+      <ActivityIndicatorLesson/>
+      <AlertLesson/>
       
-      // <Greet name="Ye Myat Hein"/>
-      // <Greet name="Hein Ye Myat"/>
-      // <StyleSheetStyling/> */}
-        // <View style={{ backgroundColor: "plum", flex: 1 }}></View>
+      <Greet name="Ye Myat Hein"/>
+      <Greet name="Hein Ye Myat"/>
+      <StyleSheetStyling/>
+        <View style={{ backgroundColor: "plum", flex: 1 }}></View>
+
         <View style={styles.container}>
           <Box style={{ backgroundColor: "#8e9b00", flex : 1, alignSelf: "flex-start" }}>Box 1</Box>
           <Box style={{ backgroundColor: "#b65d1f", flex : 1, alignSelf: "flex-end" }}>Box 2</Box>
@@ -40,11 +41,12 @@ const App = () => {
           <Box style={{ backgroundColor: "#ab9156", flex : 1, alignSelf: 'auto' }}>Box 4</Box>
           <Box style={{ backgroundColor: "#6b0803", flexBasis: 140, flex: 1 }}>Box 5</Box> {/* height and flexbasic are not same flexbasic distribute proportionally when flex 1 */}
           <Box style={{ backgroundColor: "#1c4c56", height: 140, flex: 1 }}>Box 6</Box> {/* height and flexbasic are not same flexbasic distribute proportionally when flex 1 */}
-          <Box style={{ backgroundColor: "#b95f21", flexShrink: 1 }}>Box 7</Box> {/* It fit in the children into parent when there's no enough width or height*/}
+          <Box style={{ backgroundColor: "#b95f21", flexShrink: 1 }}>Box 7</Box> {/* It fit in the children into parent when there's no enough width or height , default is 0*/}
+          <Box style={{ backgroundColor: "#b95f21", flexGrow: 1 }}>Box 8</Box> {/* It distribute the extra space to fit , default is 0*/}
         </View>
-    //   </ScrollView>
-    // </View>
-  );
+      </ScrollView>
+    </View>
+  );  
 };
 
 export default App;

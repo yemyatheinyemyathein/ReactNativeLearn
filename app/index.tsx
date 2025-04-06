@@ -1,9 +1,5 @@
 import { useState } from "react";
 import {
-  Button,
-  Image,
-  ImageBackground,
-  Pressable,
   ScrollView,
   Text,
   View,
@@ -17,6 +13,7 @@ import AlertLesson from "./AlertLesson";
 import Greet from "@/components/Greet";
 import StyleSheetStyling from "./StyleSheetStyling";
 import Box from "./Box";
+import CustomButton from "@/components/CustomButton/CustomButton.ios";
 
 const App = () => {
   const [modelOpen, setModelOpen] = useState(false);
@@ -44,6 +41,8 @@ const App = () => {
           <Box style={{ backgroundColor: "#b95f21", flexShrink: 1 }}>Box 7</Box> {/* It fit in the children into parent when there's no enough width or height , default is 0*/}
           <Box style={{ backgroundColor: "#b95f21", flexGrow: 1 }}>Box 8</Box> {/* It distribute the extra space to fit , default is 0*/}
         </View>
+
+        <CustomButton title="Press Me" onPress={() => alert("Pressed")}/>
       </ScrollView>
     </View>
   );  
